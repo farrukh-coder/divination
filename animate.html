@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="phone-moocup">
+            <div class="video-tag">
+                <video class="animate-video" width="400" height="300" poster="img/IMG_7598.MP4" autoplay preload>
+                    <source src="img/IMG_7598.MP4" type="video/mp4">
+                    Анимация не поддерживается вашим браузером.
+                    <a href="img/IMG_7598.MP4">Скачайте её</a>.
+                </video>
+            </div>
+
+            <div class="divination">
+                <div class="divination__cards">
+                    <div class="divination__card">
+                        <img src="img/9.PNG" alt="">
+                    </div>
+                    <div class="divination__card">
+                        <img src="img/10.PNG" alt="">
+                    </div>
+                    <div class="divination__card">
+                        <img src="img/11.PNG" alt="">
+                    </div>
+                </div>
+                <p class="divination__text">
+                    Купить билет на самолёт, поменять работу или завести собаку сегодня прекрасный день для осуществления мечты
+                </p>
+                <a class="animate-link main-link" href="promo.html">
+                    <span>
+                        Далее                        
+                    </span>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script>
+        let videos = document.querySelectorAll(".animate-video"),
+            divination = document.querySelector('.divination');;
+
+        videos.forEach(video => {
+            video.addEventListener("ended", () => {
+                let parent = video.parentElement;
+                parent.classList.add('disable-animate');
+
+                setTimeout(() => {
+                    parent.remove();
+                    divination.style.display = 'flex';
+                }, 400);
+                
+            });
+        });
+    </script>
+</body>
+
+</html>
