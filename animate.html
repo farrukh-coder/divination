@@ -6,15 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
-</head>
 
+    
+</head>
 <body>
     <div class="container">
         <div class="phone-moocup">
             <div class="video-tag">
-                <video class="animate-video" width="400" height="300" poster="img/IMG_7598.MP4" preload="false" autoplay tabindex="0" playsinline>
+                <video class="animate-video" preload="auto" autoplay tabindex="0" playsinline>
                     <source src="img/IMG_7598.MP4" type="video/mp4">
                     Анимация не поддерживается вашим браузером.
                     <a href="img/IMG_7598.MP4">Скачайте её</a>.
@@ -50,7 +52,7 @@
 
     <script>
         let videos = document.querySelectorAll(".animate-video"),
-            divination = document.querySelector('.divination');;
+            divination = document.querySelector('.divination');
 
         videos.forEach(video => {
             video.addEventListener("ended", () => {
@@ -65,6 +67,7 @@
             });
         });
     </script>
+    <script src="https://vjs.zencdn.net/8.0.4/video.min.js"></script>
 </body>
 
 </html>
