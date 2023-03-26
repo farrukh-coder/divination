@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/media.css" />
   </head>
   <body>
+    <audio class="audio" src="img/audio.mp3" autoplay></audio>
     <div class="container">
       <div class="phone-moocup">
         <div class="video-tag">
@@ -24,7 +25,6 @@
             Анимация не поддерживается вашим браузером.
             <a href="img/IMG_7598.MP4">Скачайте её</a>.
           </video>
-          <audio src="img/audio.mp3" autoplay></audio>
         </div>
 
         <div class="divination">
@@ -53,8 +53,8 @@
     <script>
       let videos = document.querySelector(".animate-video"),
         divination = document.querySelector(".divination"),
+        parent = videos.parentElement,
         audio = document.querySelector(".audio");
-      let parent = videos.parentElement;
 
       videos.addEventListener("ended", () => {
         parent.classList.add("disable-animate");
@@ -63,6 +63,10 @@
           parent.remove();
           divination.style.display = "flex";
         }, 400);
+      });
+
+      video.addEventListener("play", function () {
+        audio.play();
       });
     </script>
   </body>
