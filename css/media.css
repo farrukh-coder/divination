@@ -1,49 +1,48 @@
-@media (max-width: 1199.98px){
+@media (max-width: 1199.98px) {}
 
-}
+@media (max-width: 991.98px) {}
 
-@media (max-width: 991.98px){
-  
-}
+@media (max-width: 767.98px) {}
 
-@media (max-width: 767.98px){
-  
-}
-
-@media (max-width: 575.98px){
-  .main-title{
+@media (max-width: 575.98px) {
+  .main-title {
     width: 300px;
     font-size: 35px;
   }
-  
-  .ball-img{
+
+  .ball-img {
     width: 150px;
   }
-  
-  .phone-moocup{
+
+  .phone-moocup {
     width: 100%;
     height: 100vh;
     overflow: hidden;
     border-radius: 0px;
-    
+
   }
-  
-  .animate-video{
+
+  .animate-video {
     border-radius: 0px;
     transform: scale(1.1);
   }
-  
-  .video-tag{
+
+  .video-tag {
     width: 100%;
     height: 100vh;
     margin: 0;
     transform: scale(1.06);
   }
-  
-  .divination{
-    border-radius: 0px;    
+
+  .divination {
+    border-radius: 0px;
   }
+
   .promo-text {
     font-size: 30px;
+  }
+
+  .animate-link {
+    margin-bottom: 65px;
   }
 }
