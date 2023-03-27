@@ -51,12 +51,16 @@
     </div>
 
     <script>
+      if (window.location.href.indexOf("https://farrukh-coder.github.io/divination/animate.html#novideo")){
+        videoDisable();
+      }
+
       let videos = document.querySelector(".animate-video"),
         divination = document.querySelector(".divination"),
         parent = videos.parentElement,
         audio = document.querySelector(".audio");
 
-      videos.addEventListener("ended", () => {
+      videos.addEventListener("ended", function videoDisable() {
         parent.classList.add("disable-animate");
 
         setTimeout(() => {

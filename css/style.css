@@ -135,7 +135,7 @@ img {
 
 .divination__card {
   opacity: 0;
-  animation: fadeIn 0.8s ease-in-out forwards;
+  animation: fadeIn 0.95s ease-in-out forwards;
   transform: translateY(100%);
 }
 
