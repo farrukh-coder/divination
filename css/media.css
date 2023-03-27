@@ -13,7 +13,7 @@
 @media (max-width: 575.98px){
   .main-title{
     width: 300px;
-    font-size: 25px;
+    font-size: 35px;
   }
   
   .ball-img{
@@ -30,6 +30,7 @@
   
   .animate-video{
     border-radius: 0px;
+    transform: scale(1.1);
   }
   
   .video-tag{
@@ -41,5 +42,8 @@
   
   .divination{
     border-radius: 0px;    
+  }
+  .promo-text {
+    font-size: 30px;
   }
 }
