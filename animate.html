@@ -54,10 +54,14 @@
     if (window.location.href.indexOf("https://farrukh-coder.github.io/divination/animate.html#novideo")) {
       console.log('sdfasdf');
       videoDisable();
+    } else {
+      videos.addEventListener("ended", videoDisable);
+      videos.addEventListener("play", function () {
+        audio.play();
+      });
     }
 
 
-    videos.addEventListener("ended", videoDisable);
 
     function videoDisable() {
       parent.classList.add("disable-animate");
@@ -67,10 +71,6 @@
         divination.style.display = "flex";
       }, 400);
     }
-
-    videos.addEventListener("play", function () {
-      audio.play();
-    });
   </script>
 </body>
 
