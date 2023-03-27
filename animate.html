@@ -52,13 +52,14 @@
       audio = document.querySelector(".audio");
 
     if (window.location.href.indexOf("https://farrukh-coder.github.io/divination/animate.html#novideo") !== -1) {
-      console.log('sdfasdf');
-      videoDisable();
-    } else {
       videos.addEventListener("ended", videoDisable);
       videos.addEventListener("play", function () {
         audio.play();
       });
+    } else {
+      console.log('sdfasdf');
+      videoDisable();
+
     }
 
 
