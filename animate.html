@@ -24,17 +24,17 @@
 
       <div class="divination">
         <div class="divination__cards">
-          <div class="divination__card">
+          <div class="divination__card animate-in">
             <img src="img/9.PNG" alt="" />
           </div>
-          <div class="divination__card">
+          <div class="divination__card animate-in">
             <img src="img/10.PNG" alt="" />
           </div>
-          <div class="divination__card">
+          <div class="divination__card animate-in">
             <img src="img/11.PNG" alt="" />
           </div>
         </div>
-        <p class="divination__text">
+        <p class="divination__text animate-in">
           Купить билет на самолёт, поменять работу или завести собаку сегодня
           прекрасный день для осуществления мечты
         </p>
@@ -45,7 +45,22 @@
     </div>
   </div>
 
+  <!-- <script src="js/main.js"></script> -->
   <script>
+    const animateIn = document.querySelectorAll('.animate-in');
+
+    function showBlocks() {
+      animateIn.forEach(function (block, index) {
+        setTimeout(function () {
+          block.style.opacity = '1';
+          block.style.transform = 'translateY(0)';
+        }, index * 400); // задержка появления каждого блока
+      });
+    }
+
+
+
+
     let videos = document.querySelector(".animate-video"),
       divination = document.querySelector(".divination"),
       parent = videos.parentElement,
@@ -70,6 +85,9 @@
       setTimeout(() => {
         parent.remove();
         divination.style.display = "flex";
+        setTimeout(() => {
+          showBlocks();
+        }, 500);
       }, 400);
     }
   </script>
